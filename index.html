@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>dongjieproject</title>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="./css/base.css">
-    <link rel="stylesheet" href="./css/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
     <style>
         .alert{
             transition: 0.5s;
@@ -16,103 +15,111 @@
             opacity: 1;
         }
         .w {
-    max-width: 400px;
-    margin: 100px auto;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  h3 {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  .registerarea {
-    margin-bottom: 30px;
-  }
-  
-  .registerarea ul {
-    list-style-type: none;
-  }
-  
-  .registerarea li {
-    margin-bottom: 10px;
-    position: relative;
-  }
-  
-  .registerarea label {
-    font-weight: bold;
-  }
-  
-  .registerarea .username {
-    width: 100%;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-  }
-  .registerarea .password {
-    width: 100%;
-    padding: 5px;
-    border: 1px solid #ccc;
-    border-radius: 3px;
-    position: relative;
-  }
+                max-width: 400px;
+                margin: 220px auto;
+                background-color:rgba(24, 35, 180, 0.5);
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            
+            h1 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .registerarea {
+                margin-bottom: 30px;
+            }
+            
+            .registerarea ul {
+                list-style-type: none;
+            }
+            
+            .registerarea li {
+                margin-bottom: 10px;
+                position: relative;
+            }
+            
+            .registerarea label {
+                font-weight: bold;
+            }
+            
+            .registerarea .username {
+                width: 100%;
+                padding: 5px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+            }
+            .registerarea .password {
+                width: 100%;
+                padding: 5px;
+                border: 1px solid #ccc;
+                border-radius: 3px;
+                position: relative;
+            }
 
-  
-  .registerarea .btn {
-    width: 100%;
-    padding: 10px;
-    background-color: #007bff;
-    border: none;
-    border-radius: 3px;
-    color: #fff;
-    cursor: pointer;
-    
-  }
-.btn:hover {
-    background-color: #0056b3;
-}
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-li{
-  list-style: none;
-}
-body{
-  font: 14px/1.5 "Microsoft Yahei", "Hiragino San GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
-  color: #333;
-}
-a{
-  color: #333;
-  text-decoration: none;
-}
+            
+            .registerarea .btn {
+                width: 100%;
+                padding: 10px;
+                background-color: #a98d31;
+                border: none;
+                border-radius: 3px;
+                color: #fff;
+                cursor: pointer;
+                
+            }
+            .btn:hover {
+                background-color: #0056b3;
+            }
+            *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            }
+            li{
+            list-style: none;
+            }
+            body{
+            font: 14px/1.5 "Microsoft Yahei", "Hiragino San GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+            color: #333;
+            }
+            a{
+            color: #333;
+            text-decoration: none;
+            }
+            body{
+                background-image: url(./背景图.png);
+                background-size: cover;
+            }
+            #eyeIcon{
+                position: absolute;
+                right: 10px;
+            }
     </style>
 </head>
 <body>
-    <div class="w">
-        <h3>用户登录</h3>
-        <!-- 登录结果提示框 -->
-        <div class="alert alert-success" role="alert"></div>
-        <!-- 表单 -->
-        <div class="registerarea">
-             <form>
-            <div class="reg_form">
-                <ul type="none">
-                    <li><label for="username">账户：</label><input type="text" placeholder="请输入账户" class="username"></li>
-                    <li><label for="password">密码：</label>
-                            <!-- <img src="imageopen.jpg" alt="" id="eye"> -->
-                        <input type="password" placeholder="请输入密码" class="password">
-                    </li>
-                    <li><button type="button" class="btn">登录</button></li>
-                    <!-- 用户名：dongjieproject密码：42014002 -->
-                </ul>
-            </form>
+        <div class="w">
+            <h1>用户登录</h1>
+            <!-- 登录结果提示框 -->
+            <div class="alert alert-success" role="alert"></div>
+            <!-- 表单 -->
+            <div class="registerarea">
+                 <form>
+                <div class="reg_form">
+                    <ul type="none">
+                        <li><label for="username">账户：</label><input type="text" placeholder="请输入账户" class="username"></li>
+                        <label for="password">密码：</label>
+                            <li><div style="display: inline;"> <input type="password" id="passwordInput" placeholder="请输入密码" class="password"></div>
+                            <div id="eyeIcon" style="display: inline;"><i class="fas fa-eye" style="cursor: pointer;"></i></div>
+                        </li>
+                        <li><button type="button" class="btn">登录</button></li>
+                        <!-- 用户名：dongjieproject密码：42014002 -->
+                    </ul>
+                </form>
+                </div>
             </div>
         </div>
-    </div>
     <script>
         flag_sum=0
         const myAlert = document.querySelector('.alert')
@@ -132,6 +139,20 @@ a{
             }
             
         }
+            var passwordInput = document.getElementById("passwordInput");
+                var eyeIcon = document.getElementById("eyeIcon");
+
+                eyeIcon.addEventListener("click", function() {
+                if (passwordInput.type === "password") {
+                    passwordInput.type = "text";
+                    eyeIcon.firstElementChild.classList.remove("fa-eye");
+                    eyeIcon.firstElementChild.classList.add("fa-eye-slash");
+                } else {
+                    passwordInput.type = "password";
+                    eyeIcon.firstElementChild.classList.remove("fa-eye-slash");
+                    eyeIcon.firstElementChild.classList.add("fa-eye");
+                }
+                });
         document.querySelector('.btn').addEventListener(
             'click',()=>{
                 const username=document.querySelector('.username').value
